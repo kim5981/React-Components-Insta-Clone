@@ -14,7 +14,7 @@ import dummyData from "./dummy-data"
 // Import the dummyData
 import './App.css';
 
-const App = () => {
+const App = (props) => {
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
   const [posts, setPosts] = useState(dummyData);
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
@@ -38,7 +38,7 @@ const App = () => {
   return (
     <div className='App'>
       <SearchBar/>
-      <Posts />
+      <Posts posts= { props } likePost = { props } />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
