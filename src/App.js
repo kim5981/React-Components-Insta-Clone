@@ -15,9 +15,8 @@ import './App.css';
 
 // const {} = props;
 
-const App = (props) => {
+const App = () => {
 
-  <h1>DEBUG</h1>
 
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
   const [posts, setPosts] = useState(dummyData);
@@ -42,7 +41,7 @@ const App = (props) => {
   
     const updatedLikes = posts.map( post => {
       if (post.id === postId) {
-        return [ ...post, post.likes + 1]
+        return { ...post, likes: post.likes + 1}
       } else {
         return post;
       }
