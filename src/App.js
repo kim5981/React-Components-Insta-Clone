@@ -6,7 +6,6 @@
 
 // Import the state hook
 import React, { useState } from 'react';
-import Post  from "./components/Posts/Post"
 import Posts from "./components/Posts/Posts"
 import SearchBar from "./components/SearchBar/SearchBar"
 import dummyData from "./dummy-data"
@@ -57,7 +56,7 @@ const App = (props) => {
   return (
     <div className='App'>
       <SearchBar/>
-      <Posts posts= { posts } likePost = { likePost }/>
+      <Posts posts= { posts  /** the state up there ^^ */ } likePost = { likePost /** the fn we write up there ^^ */ }/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
